@@ -16,7 +16,7 @@ Created on Wed Mar 22 16:37:22 2023
 
 
 class CircularQueue:
-    # Inner class for creating nodes
+    # Inner class "node" for creating nodes
     class Node:
         # defines inner Node class with two variables
         __slots__ = 'element', 'next'
@@ -92,30 +92,31 @@ class CircularQueue:
 q = CircularQueue()
 
 # Add some elements to the queue
-q.enqueue(1)
-q.enqueue(2)
-q.enqueue(3)
+q.enqueue("First test")
+q.enqueue("Another element")
+q.enqueue("last initial element")
 
 # Get the element at the head of the queue
-print(q.first())  # Output: 1
+print("Current first element is:", q.first())  # Output: First test
 
 # Remove an element from the head of the queue
 q.dequeue()
 
 # Add another element to the back of the queue
-q.enqueue(4)
+q.enqueue("Later addition")
 
 # Get the current size of the queue
-print(len(q))  # Output: 3
+print("Current length of the queue:", len(q))  # Output: 3
 
 # Rotate the queue
 q.rotate()
 
 # Get the element at the head of the queue
-print("this: ", q.first())  # Output: 3
+print("New first element is:", q.first())  # Output: rotated element
 
 # Remove all elements from the queue
 while not q.is_empty():
-    print(q.dequeue())
+    print("Most recent dequeue:", q.dequeue())
 
+print("Current length of the queue is", len(q), "so the queue should be empty")
 # Output: 2 3 4
