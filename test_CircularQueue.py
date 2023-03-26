@@ -5,7 +5,7 @@ Created on Tue Mar 14 15:48:01 2023
 @author: Benedikt Korbach, Niklas Pawelzik, Justus von Samson-Himmelstjerna, Alvaro Guijarro May
 """
 
-from first_draft import CircularQueue
+from run import CircularQueue
 
 ### Initialization ###
 
