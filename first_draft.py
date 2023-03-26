@@ -2,7 +2,7 @@
 """
 Created on Wed Mar 22 16:37:22 2023
 
-@author: nikla
+@author: Niklas Pawelzik, Justus von Samson-Himmelstjerna, Alvaro Guijarro May, Benedikt Korbach
 """
 # Implement a queue as a Circular Linked List.
 # Your CircularQueue should use an inner class Node.
@@ -10,7 +10,7 @@ Created on Wed Mar 22 16:37:22 2023
     # Your queue should implement the following methods:
         # first(self) returns the element that is currently at the head of the queue. Raises an exception if the queue is empty.
         # dequeue(self) Removes the first element of the queue.
-        # dequeue(self) Adds an element to the back of the queue. Raises an exception if the queue is empty.
+        # enqueue(self) Adds an element to the back of the queue. Raises an exception if the queue is empty.
         # def rotate(self): Rotate the queue: effectively transfer the item at the head of the list to the tail of the list
     # You may use the template provided, or start your own implementation from scratch.
 
@@ -100,7 +100,7 @@ q.enqueue("last initial element")
 print("Current first element is:", q.first())  # Output: First test
 
 # Remove an element from the head of the queue
-q.dequeue()
+print(q.dequeue())
 
 # Add another element to the back of the queue
 q.enqueue("Later addition")
@@ -119,4 +119,3 @@ while not q.is_empty():
     print("Most recent dequeue:", q.dequeue())
 
 print("Current length of the queue is", len(q), "so the queue should be empty")
-# Output: 2 3 4

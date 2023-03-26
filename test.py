@@ -5,7 +5,7 @@ Created on Tue Mar 14 15:48:01 2023
 @author: Hannah
 """
 
-from cq import CircularQueue
+from first_draft import CircularQueue
 
 cq = CircularQueue()
 print("Starting Size", len(cq) )
