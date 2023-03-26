@@ -86,36 +86,3 @@ class CircularQueue:
         # rotates the queue by moving the element at the head to the tail
         if not self.is_empty():
             self._tail = self._tail.next
-
-
-# Create an empty queue
-q = CircularQueue()
-
-# Add some elements to the queue
-q.enqueue("First test")
-q.enqueue("Another element")
-q.enqueue("last initial element")
-
-# Get the element at the head of the queue
-print("Current first element is:", q.first())  # Output: First test
-
-# Remove an element from the head of the queue
-print(q.dequeue())
-
-# Add another element to the back of the queue
-q.enqueue("Later addition")
-
-# Get the current size of the queue
-print("Current length of the queue:", len(q))  # Output: 3
-
-# Rotate the queue
-q.rotate()
-
-# Get the element at the head of the queue
-print("New first element is:", q.first())  # Output: rotated element
-
-# Remove all elements from the queue
-while not q.is_empty():
-    print("Most recent dequeue:", q.dequeue())
-
-print("Current length of the queue is", len(q), "so the queue should be empty")
